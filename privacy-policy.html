@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Política de Privacidade – PadelUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cyan: #007AFF;
+    --cyan-glow: rgba(0, 122, 255, 0.25);
+    --cyan-soft: rgba(0, 122, 255, 0.08);
+    --bg: #000000;
+    --surface: #0d0d0d;
+    --surface2: #111111;
+    --border: rgba(255,255,255,0.08);
+    --text: #ffffff;
+    --muted: #6b7280;
+    --body-text: #c9d1d9;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(ellipse at center, rgba(0,122,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .logo-icon {
+    width: 52px; height: 52px;
+    background: var(--surface2);
+    border: 1px solid rgba(0,122,255,0.4);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px var(--cyan-glow);
+    font-size: 26px;
+  }
+
+  .logo-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+  }
+
+  .logo-name span { color: var(--cyan); }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    border: 1px solid rgba(0,122,255,0.3);
+    background: var(--cyan-soft);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    background: linear-gradient(to right, #fff, #007AFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  header .meta {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    letter-spacing: .02em;
+  }
+
+  .intro-card {
+    max-width: 720px;
+    margin: 48px auto;
+    padding: 0 24px;
+  }
+
+  .intro-inner {
+    background: var(--cyan-soft);
+    border: 1px solid rgba(0,122,255,0.2);
+    border-radius: 16px;
+    padding: 24px 28px;
+    color: #a0b4c8;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .intro-inner strong { color: var(--cyan); font-weight: 600; }
+
+  main { padding-bottom: 80px; }
+
+  section {
+    max-width: 720px;
+    margin: 0 auto 8px;
+    padding: 0 24px;
+  }
+
+  .section-block {
+    border-top: 1px solid var(--border);
+    padding: 36px 0;
+  }
+
+  .section-block:last-child { border-bottom: 1px solid var(--border); }
+
+  h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0,122,255,0.15);
+  }
+
+  h2 .num {
+    width: 24px; height: 24px;
+    background: var(--cyan-soft);
+    border: 1px solid rgba(0,122,255,0.25);
+    border-radius: 6px;
+    font-size: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--cyan);
+    font-weight: 700;
+  }
+
+  p { color: var(--body-text); margin-bottom: 10px; font-weight: 300; }
+
+  ul { list-style: none; padding: 0; margin-bottom: 10px; }
+
+  ul li {
+    color: var(--body-text);
+    font-weight: 300;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  ul li:last-child { border-bottom: none; }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 6px var(--cyan-glow);
+  }
+
+  ul li strong { color: #e2e8f0; font-weight: 600; }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table td {
+    padding: 12px 14px;
+    color: var(--body-text);
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .data-table td:first-child { color: #e2e8f0; font-weight: 400; }
+
+  .pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--cyan-soft);
+    color: var(--cyan);
+    border: 1px solid rgba(0,122,255,0.2);
+  }
+
+  .contact-box {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .contact-inner {
+    margin-top: 48px;
+    background: var(--surface2);
+    border: 1px solid rgba(0,122,255,0.2);
+    border-radius: 20px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-inner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,122,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-inner h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    margin-bottom: 6px;
+  }
+
+  .contact-inner .sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .contact-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+
+  .contact-item .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .contact-item .value {
+    font-size: 13px;
+    color: var(--cyan);
+    font-weight: 500;
+    word-break: break-all;
+  }
+
+  .contact-item .value.plain { color: #e2e8f0; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .06em;
+    font-weight: 300;
+  }
+
+  footer strong { color: #555; font-weight: 600; }
+
+  @media (max-width: 480px) {
+    header { padding: 60px 20px 48px; }
+    .contact-inner { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">🎾</div>
+    <div class="logo-name">Padel<span>Up</span></div>
+  </div>
+  <div class="badge">&#x2022; Documento Legal</div>
+  <h1>Política de <em>Privacidade</em></h1>
+  <p class="meta">Última atualização: 20 de março de 2026 &nbsp;·&nbsp; v1.0</p>
+</header>
+
+<div class="intro-card">
+  <div class="intro-inner">
+    Sua privacidade é fundamental para nós. Este documento descreve de forma clara e objetiva quais dados coletamos, como os utilizamos e quais são seus direitos como usuário do <strong>PadelUp</strong> — a plataforma completa para jogadores de padel.
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">1</span> Dados que Coletamos</h2>
+      <p>Para oferecer a melhor experiência na plataforma, coletamos as seguintes categorias de informação:</p>
+      <ul>
+        <li><strong>Cadastro e autenticação:</strong> nome, e-mail e senha (armazenada com criptografia). Login via provedores sociais quando utilizado.</li>
+        <li><strong>Perfil do jogador:</strong> foto, nível de jogo, preferências esportivas e configurações de conta inseridos voluntariamente.</li>
+        <li><strong>Atividade esportiva:</strong> partidas criadas e jogadas, reservas de quadras, placares registrados e histórico de desempenho.</li>
+        <li><strong>Progresso e conquistas:</strong> badges desbloqueados, metas cumpridas e posições no ranking.</li>
+        <li><strong>Notificações:</strong> preferências de alertas push, quando autorizadas pelo usuário.</li>
+        <li><strong>Dados técnicos:</strong> identificador do dispositivo, sistema operacional e versão do app, usados exclusivamente para suporte.</li>
+      </ul>
+      <p>Não coletamos dados de localização em tempo real sem consentimento explícito e prévio.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">2</span> Como Usamos Seus Dados</h2>
+      <ul>
+        <li>Criar e gerenciar sua conta de jogador na plataforma;</li>
+        <li>Exibir ranking, histórico de partidas e progresso de metas;</li>
+        <li>Processar reservas de quadras e confirmações de jogos;</li>
+        <li>Enviar notificações sobre atividades relevantes no app;</li>
+        <li>Melhorar funcionalidades e corrigir problemas técnicos;</li>
+        <li>Cumprir obrigações legais aplicáveis à operação do serviço.</li>
+      </ul>
+      <p>Não utilizamos seus dados para publicidade direcionada de terceiros.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">3</span> Segurança dos Dados</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Dado</th>
+            <th>Tratamento</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Senha</td><td>Hash criptográfico (nunca em texto puro)</td><td><span class="pill">Criptografado</span></td></tr>
+          <tr><td>Tráfego de rede</td><td>HTTPS / TLS em todas as requisições</td><td><span class="pill">Criptografado</span></td></tr>
+          <tr><td>Dados em repouso</td><td>Armazenamento protegido em nuvem (Firebase)</td><td><span class="pill">Criptografado</span></td></tr>
+          <tr><td>Acesso interno</td><td>Restrito apenas à equipe técnica responsável</td><td><span class="pill">Controlado</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">4</span> Compartilhamento</h2>
+      <p>Não vendemos seus dados. Compartilhamos informações apenas com:</p>
+      <ul>
+        <li><strong>Provedores de infraestrutura:</strong> serviços de nuvem (Google Firebase/Cloud) necessários para o funcionamento do app, sob contratos de proteção de dados;</li>
+        <li><strong>Outros jogadores:</strong> dados de perfil público (nome, ranking, badges) visíveis na plataforma, conforme suas configurações de privacidade;</li>
+        <li><strong>Autoridades legais:</strong> exclusivamente quando exigido por lei ou ordem judicial válida.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">5</span> Retenção e Exclusão</h2>
+      <p>Seus dados são mantidos enquanto sua conta estiver ativa. Ao solicitar a exclusão da conta, os dados pessoais identificáveis serão removidos em até <strong>30 dias corridos</strong>, salvo obrigação legal de retenção.</p>
+      <p>Você pode solicitar a exclusão a qualquer momento pelo e-mail de contato listado abaixo.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">6</span> Seus Direitos (LGPD)</h2>
+      <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:</p>
+      <ul>
+        <li>Confirmar a existência de tratamento dos seus dados pessoais;</li>
+        <li>Acessar, corrigir ou atualizar suas informações a qualquer momento;</li>
+        <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Revogar consentimentos previamente concedidos;</li>
+        <li>Solicitar a portabilidade dos seus dados para outro serviço;</li>
+        <li>Ser informado sobre com quem seus dados são compartilhados.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">7</span> Crianças e Adolescentes</h2>
+      <p>O PadelUp não é destinado a menores de 13 anos. Não coletamos intencionalmente dados de crianças. Caso identifique que uma criança forneceu dados sem consentimento dos responsáveis, entre em contato para remoção imediata.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-block">
+      <h2><span class="num">8</span> Alterações nesta Política</h2>
+      <p>Esta política pode ser atualizada periodicamente para refletir melhorias no app ou mudanças legais. Notificaremos você pelo próprio aplicativo e atualizaremos a data no topo deste documento sempre que houver alterações relevantes.</p>
+      <p>O uso continuado do PadelUp após as alterações constitui aceite da versão atualizada.</p>
+    </div>
+  </section>
+
+  <div class="contact-box">
+    <div class="contact-inner">
+      <h3>Fale com a Equipe de Privacidade</h3>
+      <p class="sub">Para exercer seus direitos ou tirar dúvidas sobre o tratamento dos seus dados.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="label">Aplicativo</div>
+          <div class="value plain">PadelUp</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">E-mail</div>
+          <div class="value">tormestechnology@gmail.com</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">País</div>
+          <div class="value plain">Brasil 🇧🇷</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Lei aplicável</div>
+          <div class="value plain">LGPD – Lei 13.709/2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>PadelUp</strong> &nbsp;·&nbsp; tormestechnology@gmail.com &nbsp;·&nbsp; © 2026 Tormes Technology. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
